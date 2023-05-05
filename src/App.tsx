@@ -7,14 +7,16 @@ import Signin from "./components/signin";
 
 function App() {
   return (
-    <Router>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Problems />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Signin />} />
-      </Routes>
-    </Router>
+    <div className="bg-neutral-800 min-h-screen h-full text-white">
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Problems />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Signin />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

@@ -29,17 +29,29 @@ function Problems() {
   let problemhtml = currProblems.map((problem) => {
     return (
       <tr>
-        <td>{problem.name}</td>
+        <td className="h-16">{problem.name}</td>
         <td>{problem.acceptance}</td>
         <td>{problem.difficulty}</td>
       </tr>
     );
   });
   return (
-    <div style={{ width: "100vw" }}>
+    <div className="flex flex-col items-center">
       <table width="80%">{problemhtml}</table>
-      <button onClick={() => setCurrProblems(problems)}>1</button>
-      <button onClick={() => setCurrProblems(problems2)}>2</button>
+      <div className="flex gap-8">
+        <button
+          className="border-2 px-6 py-1 bg-black rounded-md border-solid border-black"
+          onClick={() => setCurrProblems(problems)}
+        >
+          1
+        </button>
+        <button
+          className="border-2 bg-black rounded-md px-6 py-1 border-solid border-black"
+          onClick={() => setCurrProblems(problems2)}
+        >
+          2
+        </button>
+      </div>
     </div>
   );
 }
